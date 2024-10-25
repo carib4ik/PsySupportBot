@@ -1,0 +1,4 @@
+AppSettings/app_settings.json
+AppSettings/secrets.json
+bin/bug/net8.0/AppSettings/app_settings.json
+bin/bug/net8.0/AppSettings/secrets.json
