@@ -86,7 +86,7 @@ public class QuestionState : ChatStateBase
     {
         await base.OnEnter(chatId);
 
-        var response = "Задайте Ваш вопрос. На ответ мне может потребоваться около минуты.";
+        var response = "Ask your question. It may take me about a minute to respond";
         await _botClient.SafeSendTextMessageAsync(chatId, response);
         
     }
