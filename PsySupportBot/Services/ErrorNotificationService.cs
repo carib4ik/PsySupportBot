@@ -86,7 +86,7 @@ public class ErrorNotificationService
     {
         try
         {
-            var response = $"В боте @{_botUsername.EscapeMarkdownV2()} произошла ошибка: {message.EscapeMarkdownV2()}";
+            var response = $"An error: {message.EscapeMarkdownV2()} occurred in the bot @{_botUsername.EscapeMarkdownV2()}";
             await _botClient.SendTextMessageAsync(_errorsLogChatId, response, parseMode: ParseMode.MarkdownV2);
         }
         catch (Exception exception)
