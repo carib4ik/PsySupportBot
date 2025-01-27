@@ -48,19 +48,19 @@ public class QuestionState : ChatStateBase
         {
             new[]
             {
-                InlineKeyboardButton.WithCallbackData("Задать вопрос", GlobalData.QUESTION)
+                InlineKeyboardButton.WithCallbackData("Ask a question", GlobalData.QUESTION)
             },
             new[]
             {   
-                InlineKeyboardButton.WithCallbackData("Консультация специалиста", GlobalData.SPECIALIST)
+                InlineKeyboardButton.WithCallbackData("Specialist consultation", GlobalData.SPECIALIST)
             },
             new[]
             {
-                InlineKeyboardButton.WithCallbackData("Я все узнал спасибо", GlobalData.DONE)
+                InlineKeyboardButton.WithCallbackData("I’ve learned everything, thank you", GlobalData.DONE)
             }
         });
 
-        var response = "Хотите задать еще вопрос?";
+        var response = "Would you like to ask another question?";
         await _botClient.SafeSendTextMessageAsync(chatId, response, replyMarkup: replyMarkup);
         await _stateMachine.TransitTo<IdleState>(chatId);
         
@@ -68,10 +68,10 @@ public class QuestionState : ChatStateBase
 
     private async Task HandleNullAnswer(long chatId)
     {
-        var response = "Пожалуйста, задайте Ваш вопрос снова.";
+        var response = "Please ask your question again";
         
-        var button1 = InlineKeyboardButton.WithCallbackData("Задать вопрос", GlobalData.QUESTION);
-        var button2 = InlineKeyboardButton.WithCallbackData("Консультация специалиста", GlobalData.SPECIALIST);
+        var button1 = InlineKeyboardButton.WithCallbackData("Ask a question", GlobalData.QUESTION);
+        var button2 = InlineKeyboardButton.WithCallbackData("Specialist consultation", GlobalData.SPECIALIST);
         
         var keyboard = new InlineKeyboardMarkup(new[]
         {

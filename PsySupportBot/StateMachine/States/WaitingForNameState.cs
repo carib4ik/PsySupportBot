@@ -32,7 +32,7 @@ public class WaitingForNameState : ChatStateBase
     {
         await base.OnEnter(chatId);
 
-        var respose = "Пожалуйста, введите ваше ФИО.";
+        var respose = "Please enter your full name";
         await _botClient.SafeSendTextMessageAsync(chatId, respose);
     }
 }

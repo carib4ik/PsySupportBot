@@ -33,12 +33,12 @@ public class StartState : ChatStateBase
 
     private async Task SendGreeting(long chatId)
     {
-        var greetings = $"Приветствую!\nЯ первый психологический бот с искустренным интелектом, созданный агентством психологической поддержки *{_agencyName}*." +
-                        "\nЯ могу оказать Вам мгновенную первичную консультацию по любому интересующему Вас вопросу," +
-                        " либо передать Ваши данные нашему специалисту для более детальной консультации.";
+        var greetings = $"Greetings!\nI am the first psychological bot with artificial intelligence, created by the psychological support agency *{_agencyName}*." +  
+                        "\nI can provide you with an instant initial consultation on any question of interest to you," +  
+                        " or forward your information to our specialist for a more detailed consultation.";
         
-        var questionButton = InlineKeyboardButton.WithCallbackData("Задать вопрос", GlobalData.QUESTION);
-        var specialistButton = InlineKeyboardButton.WithCallbackData("Связаться со специалистом", GlobalData.SPECIALIST);
+        var questionButton = InlineKeyboardButton.WithCallbackData("Ask a question", GlobalData.QUESTION);
+        var specialistButton = InlineKeyboardButton.WithCallbackData("Specialist consultation", GlobalData.SPECIALIST);
         
         var keyboard = new InlineKeyboardMarkup(new[]
         {

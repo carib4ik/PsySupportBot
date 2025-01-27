@@ -34,3 +34,4 @@ C:\Users\carib\RiderProjects\PsySupportBot\PsySupportBot\bin\Debug\net8.0\Micros
 C:\Users\carib\RiderProjects\PsySupportBot\PsySupportBot\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\carib\RiderProjects\PsySupportBot\PsySupportBot\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\carib\RiderProjects\PsySupportBot\PsySupportBot\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\carib\RiderProjects\PsySupportBot\PsySupportBot\obj\Debug\net8.0\PsySupportBot.sourcelink.json

@@ -24,20 +24,19 @@ public class DoneState : ChatStateBase
     {
         await base.OnEnter(chatId);
         
-        var response = "Спасибо, что воспользовались нашими услугами.\n" + 
-                       "Если потребуется, я могу оказать Вам мгновенную первичную консультацию " +
-                       "по любому интересующему" + " Вас вопросу, либо передать Ваши данные нашему " +
-                       "специалисту для более детальной консультации.";
+        var response = "Thank you for using our services.\n" +  
+                       "I can provide you with an instant initial consultation on any question of interest to you, " +  
+                       "or forward your information to our specialist for a more detailed consultation.";
         
         var keyboard = new InlineKeyboardMarkup(new[]
         {
             new[]
             {
-                InlineKeyboardButton.WithCallbackData("Задать вопрос", GlobalData.QUESTION)
+                InlineKeyboardButton.WithCallbackData("Ask a question", GlobalData.QUESTION)
             },
             new[]
             {
-                InlineKeyboardButton.WithCallbackData("Консультация специалиста", GlobalData.SPECIALIST)
+                InlineKeyboardButton.WithCallbackData("Specialist consultation", GlobalData.SPECIALIST)
             },
 
         });

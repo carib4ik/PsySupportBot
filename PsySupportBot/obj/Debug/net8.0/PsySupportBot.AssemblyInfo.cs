@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PsySupportBot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef2924311c93b2f90e8c3e6da1cabc7a0e61d074")]
 [assembly: System.Reflection.AssemblyProductAttribute("PsySupportBot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PsySupportBot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

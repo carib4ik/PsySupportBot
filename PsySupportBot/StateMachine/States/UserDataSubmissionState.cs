@@ -46,9 +46,9 @@ public class UserDataSubmissionState : ChatStateBase
     
     private string BuildUserInfo(UserData userProfile)
     {
-        var userInfo = "Информация о клиенте:" +
-                       $"\nФИО: {userProfile.Name}" +
-                       $"\nНомер телефона: {userProfile.Phone}";
+        var userInfo = "Client information" +
+                       $"\nName: {userProfile.Name}" +
+                       $"\nPhone number: {userProfile.Phone}";
         
         if (!string.IsNullOrEmpty(userProfile.TelegramName))
         {
@@ -57,7 +57,7 @@ public class UserDataSubmissionState : ChatStateBase
         
         if (!string.IsNullOrEmpty(userProfile.LastQuestion))
         {
-            userInfo += $"\nПоследний отправленный вопрос боту: {userProfile.LastQuestion}";
+            userInfo += $"\nThe last question sent to the bot: {userProfile.LastQuestion}";
         }
 
         return userInfo;
@@ -67,7 +67,7 @@ public class UserDataSubmissionState : ChatStateBase
     {
         await base.OnEnter(chatId);
 
-        var response = "Спасибо за обращение. Данные переданы нашему специалисту, он свяжется с Вами в скором времени.";
+        var response = "Thank you for reaching out. The information has been forwarded to our specialist, and they will contact you shortly.";
         await _botClient.SafeSendTextMessageAsync(chatId, response);
         await _stateMachine.TransitTo<IdleState>(chatId);
     }

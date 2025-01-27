@@ -24,7 +24,7 @@ public class WaitingForPhoneState : ChatStateBase
         
         if (!Regex.IsMatch(message.Text, @"^[+\-()\d\s]*$"))
         {
-            var response = "Номер телефона введен некорректно.\nПожалуйста, введите номер без букв.";
+            var response = "The phone number is entered incorrectly.\nPlease enter the number without letters";
             await _botClient.SafeSendTextMessageAsync(chatId, response);
             return;
         }
@@ -38,7 +38,7 @@ public class WaitingForPhoneState : ChatStateBase
     {
         await base.OnEnter(chatId);
 
-        var response = "Пожалуйста, введите ваше номер телефона.";
+        var response = "Please enter your phone number.";
         await _botClient.SafeSendTextMessageAsync(chatId, response);
     }
 }
