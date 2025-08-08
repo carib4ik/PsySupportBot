@@ -1,1 +1,9 @@
-*.json
+# Rider
+.idea/
+
+# Output folders
+bin/
+obj/
+
+# Ignore images
+images/
